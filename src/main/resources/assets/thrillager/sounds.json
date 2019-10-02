@@ -1,0 +1,59 @@
+{
+  "cast_spell": {
+    "subtitle": "thrillager.subtitle.spellcast",
+    "sounds": [
+      "thrillager:madness_1",
+      "thrillager:madness_2",
+      "thrillager:madness_3",
+      "thrillager:madness_4",
+      "thrillager:madness_5",
+      "thrillager:madness_6",
+      "thrillager:madness_7",
+      "thrillager:madness_8",
+      "thrillager:madness_9",
+      "thrillager:madness_10"
+    ]
+  },
+  "summon": {
+    "subtitle": "thrillager.subtitle.summon",
+    "sounds": [
+      "thrillager:summon_1",
+      "thrillager:summon_2",
+      "thrillager:summon_3",
+      "thrillager:summon_4",
+      "thrillager:summon_5",
+      "thrillager:summon_6",
+      "thrillager:summon_7",
+      "thrillager:summon_8"
+    ]
+  },
+  "attack": {
+    "subtitle": "thrillager.subtitle.grunt",
+    "sounds": [
+      "thrillager:attack_1",
+      "thrillager:attack_2",
+      "thrillager:attack_3"
+    ]
+  },
+  "hurt": {
+    "subtitle": "thrillager.subtitle.hurt",
+    "sounds": [
+      "thrillager:hurt_1",
+      "thrillager:hurt_2"
+    ]
+  },
+  "laugh": {
+    "subtitle": "thrillager.subtitle.laugh",
+    "sounds": [
+      "thrillager:laugh_1",
+      "thrillager:laugh_2"
+    ]
+  },
+  "death": {
+    "subtitle": "thrillager.subtitle.death",
+    "sounds": [
+      "thrillager:death_1",
+      "thrillager:death_2"
+    ]
+  }
+}

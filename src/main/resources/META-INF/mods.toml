@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[28,)"
+[[mods]]
+modId="thrillager"
+version="${file.jarVersion}"
+displayName="Thrillager"
+description='''
+It's thrillager
+'''
+[[dependencies.examplemod]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[28,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.thrillager]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4]"
+    ordering="NONE"
+    side="BOTH"
