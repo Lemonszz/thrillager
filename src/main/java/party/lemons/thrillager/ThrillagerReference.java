@@ -8,17 +8,7 @@ import net.minecraft.item.Items;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.IFeatureConfig;
-import net.minecraft.world.gen.feature.NoFeatureConfig;
-import net.minecraft.world.gen.feature.structure.IStructurePieceType;
-import net.minecraft.world.gen.feature.structure.Structure;
-import net.minecraft.world.gen.placement.FrequencyConfig;
-import net.minecraft.world.gen.placement.IPlacementConfig;
-import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -110,7 +100,7 @@ public class ThrillagerReference
 	{
 		ForgeRegistries.BIOMES.getEntries().forEach(b->{
 			if(!hasAnyType(b.getValue(), BiomeDictionary.Type.END, BiomeDictionary.Type.NETHER, BiomeDictionary.Type.OCEAN))
-				b.getValue().getSpawns(EntityClassification.MONSTER).add(new Biome.SpawnListEntry(THRILLAGER, 3, 1, 1));
+				b.getValue().getSpawns(EntityClassification.MONSTER).add(new Biome.SpawnListEntry(THRILLAGER, 1, 1, 1));
 		});
 	}
 
