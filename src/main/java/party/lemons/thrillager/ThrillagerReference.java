@@ -19,6 +19,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ObjectHolder;
 
+import java.util.stream.StreamSupport;
+
 @ObjectHolder(Reference.MODID)
 @Mod.EventBusSubscriber(modid = Reference.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ThrillagerReference
@@ -98,10 +100,12 @@ public class ThrillagerReference
 	@SubscribeEvent
 	public static void onCommonSetup(FMLCommonSetupEvent event)
 	{
-		ForgeRegistries.BIOMES.getEntries().forEach(b->{
-			if(!hasAnyType(b.getValue(), BiomeDictionary.Type.END, BiomeDictionary.Type.NETHER, BiomeDictionary.Type.OCEAN))
-				b.getValue().getSpawns(EntityClassification.MONSTER).add(new Biome.SpawnListEntry(THRILLAGER, 1, 1, 1));
-		});
+		StreamSupport.stream(ForgeRegistries.BIOMES.spliterator(), false)
+				.filter(b -> b.getCategory() != Biome.Category.THEEND &&
+							 b.getCategory() != Biome.Category.NETHER &&
+							 b.getCategory() != Biome.Category.OCEAN)
+				.forEach(b -> b.getSpawns(EntityClassification.MONSTER)
+							 .add(new Biome.SpawnListEntry(THRILLAGER, 1, 1, 1)));
 	}
 
 	private static boolean hasAnyType(Biome biome, BiomeDictionary.Type... types)
